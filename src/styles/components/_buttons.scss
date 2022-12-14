@@ -1,0 +1,19 @@
+.main-btn {
+    font-family: NeueMetana-Regular;
+    width: fit-content;
+    padding: 20px 55px;
+    background-color: #000;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: $font-color;
+    font-size: 22px;
+    margin-top: 20px;
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.5));
+    cursor: pointer;
+    transition: .1s background-color ease-in-out;
+
+    &:hover {
+        background-color: $additional-color;
+    }
+}

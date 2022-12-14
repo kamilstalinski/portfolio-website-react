@@ -1,0 +1,13 @@
+.heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    .heading-line {
+        width: 150px;
+        height: 8px;
+        background-color: $secondary-color;
+        translate: 0 -2px
+    }
+}

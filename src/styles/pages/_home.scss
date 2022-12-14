@@ -1,0 +1,56 @@
+.Home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+   
+        .left-hero {
+            width: 50%;
+            height: 100%;
+            background: url('/public/img/blurry-gradient-haikei\ 1.svg') no-repeat;
+            background-size: cover;
+            background-position: right;
+            // border-radius: 0 10% 10% 0;
+        }
+    
+        .right-hero {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            // background: url('/public/img/me.png') no-repeat;
+            // background-size: contain;
+            // background-position: bottom;
+
+            img {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 750px;
+
+                @media screen and (min-width: 1480px) {
+                    right: 20%;
+                }
+                @media screen and (min-width: 1640px) {
+                    right: 35%;
+                }
+                @media screen and (max-height: 1000px)  {
+                    width: 600px;
+                }
+            }
+        }
+        
+        .wrapper {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .heading {
+                margin-bottom: 40px;
+            }
+        }
+    
+}
