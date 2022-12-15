@@ -16,4 +16,14 @@
     &:hover {
         background-color: $additional-color;
     }
+
+    @include lg {
+        padding: 15px 50px;
+        font-size: 18px;
+    }
+
+    @include sm {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
 }

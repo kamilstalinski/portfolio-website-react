@@ -64,7 +64,7 @@ const particlesConfig = {
       speed: 1.3,
       direction: "none",
       random: false,
-      straight: false,
+      straight: true,
       out_mode: "out",
       bounce: false,
       attract: {

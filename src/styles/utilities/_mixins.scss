@@ -38,3 +38,9 @@
         @content;
     }
 }
+
+@mixin rwd($screen, $screen-height) {
+    @media (max-width: #{$screen+'px'}) and (max-height: #{$screen-height+'px'}) {
+        @content;
+    }
+}

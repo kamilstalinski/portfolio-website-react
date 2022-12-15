@@ -72,4 +72,29 @@
             }
         }
     }
+
+    @include sm {
+        height: 80px;
+
+        .wrapper-nav {
+            .social-icons {
+                display: flex;
+                align-items: center;
+                a {
+                    img {
+                        width: 25px;
+                        height: 25px; 
+                        
+                        &:hover {
+                            color: $additional-color;
+                        }
+                    }
+                }
+    
+                #github {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
 }

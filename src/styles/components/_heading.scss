@@ -10,4 +10,17 @@
         background-color: $secondary-color;
         translate: 0 -2px
     }
+
+    @include sm {
+        gap: 0.5rem;
+
+        h3 {
+            font-size: 15px;
+        }
+
+        .heading-line {
+            width: 100px;
+            height: 6px;
+        }
+    }
 }
