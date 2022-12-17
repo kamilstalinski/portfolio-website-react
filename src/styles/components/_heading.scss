@@ -11,7 +11,7 @@
         translate: 0 -2px
     }
 
-    @include sm {
+    @include ssm {
         gap: 0.5rem;
 
         h3 {
@@ -21,6 +21,19 @@
         .heading-line {
             width: 100px;
             height: 6px;
+        }
+    }
+
+    @include xl {
+        gap: 2em;
+
+        h3 {
+            font-size: 2em;
+        }
+
+        .heading-line {
+            width: 15em;
+            height: 0.8em;
         }
     }
 }

@@ -2,6 +2,7 @@
     height: 100vh;
     width: 100%;
     display: flex;
+    overflow: hidden;
    
         .left-hero {
             width: 50%;
@@ -15,32 +16,97 @@
             position: relative;
             width: 50%;
             height: 100%;
-            // background: url('/public/img/me.png') no-repeat;
-            // background-size: contain;
-            // background-position: bottom;
 
             img {
                 position: absolute;
                 bottom: 0;
-                right: 0;
-                width: 750px;
+                right: 25%;
+                max-width: 65%;  
 
-                @media screen and (min-width: 1480px) {
+                @include ssm {
+                        right: 0;
+                        transform: translateX(5%);
+                        max-width: 90%;
+                }
+                @include md {
+                        right: 0;
+                        transform: translateX(0);
+                        max-width: 75%;
+                }
+
+                @media (orientation: portrait) and (min-width: $screen-3-min){
+                    max-width: 130%;
+                }
+                @include lg {
+                        right: 0;
+                        // transform: translateX(50%);
+                        max-width: 80%;
+                }
+                // @include xl-tablet {
+                //         max-width: 100%;
+                //         right: 10%;
+                // }
+                
+                @include xl {
+                        max-width: 70%;
+                        right: 15%;
+                }
+
+                // @media (min-width: $screen-1-min) and (min-height: 572px) {
+                //         max-width: 75%;
+                //         right: 0;
+                // }
+                // @media (min-width: $screen-2-min) and (min-height: 572px) {
+                //         max-width: 65%;
+                //         right: 0;
+                // }
+                // @media (min-width: $screen-3-min) and (min-height: 572px) {
+                //         max-width: 90%;
+                //         right: 10%;
+                // }
+                @media (min-width: $screen-4-min) and (min-height: 572px) {
+                        max-width: 80%;
+                        right: 10%;
+                }
+                @media (min-width: $screen-5-min) and (min-height: 572px) {
+                        max-width: 70%;
+                }
+
+                @media (min-width: $screen-6-min) and (min-height: 572px) {
+                    max-width: 70%;
+                }
+                // @media (min-width: $screen-1-min) and (min-height: 900px) {
+                //         max-width: 100%;
+                //         right: 0;
+                // }
+                // @media (min-width: $screen-2-min) and (min-height: 900px) {
+                //         max-width: 90%;
+                //         right: 0;
+                // }
+                // @media (min-width: $screen-3-min) and (min-height: 900px) {
+                //         max-width: 100%;
+                //         right: 10%;
+                // }
+                @media (min-width: $screen-4-min) and (min-height: 900px) {
+                        max-width: 100%;
+                        right: 10%;
+                }
+                @media (min-width: $screen-5-min) and (min-height: 900px) {
+                        max-width: 100%;
+                }
+                @include xxl {
+                    max-width: 60%;
                     right: 20%;
-                }
-                @media screen and (min-width: 1640px) {
-                    right: 35%;
-                }
-                @media screen and (max-height: 1000px)  {
-                    width: 600px;
-                }
-                @media screen and (max-height: 800px) and (max-width: 1480px) {
-                    width: 470px;
-                    right: 15%;
-                }
+            }
 
-                @include rwd(992, 990) {
-                    width: 30%;
+                @media (min-width: $screen-6-min) and (min-height: 900px) {
+                    max-width: 100%;
+                }
+                @media (min-width: 1420px) and (min-height: 900px) {
+                    max-width: 80%;
+                }
+                @media (min-width: 1800px) and (min-height: 900px) {
+                    max-width: 65%;
                 }
                 
             }
@@ -61,140 +127,139 @@
             }
         }
 
-    @include rwd(1350) {
-        .wrapper {
+        @include ssm {
+            flex-direction: column;
 
-            h1 {
-                font-size: 55px;
+            .left-hero {
+                width: 100%;
+                height: 45%;
             }
 
-            h2 {
-                font-size: 35px;
-            }
-        }
-    }
-    @include rwd(1250) {
-        .wrapper {
-
-            h1 {
-                font-size: 50px;
+            .right-hero {
+                width: 100%;
+                height: 55%;
             }
 
-            h2 {
-                font-size: 30px;
-            }
-        }
-    }
-    @include rwd(1150) {
-        .wrapper {
+            .wrapper {
+                height: 45%;
+                margin-top: 10px;
 
-            h1 {
-                font-size: 45px;
-            }
+                .heading {
+                    margin-bottom: 1em;
+                }
 
-            h2 {
-                font-size: 25px;
-            }
-        }
-    }
-    @include rwd(1050) {
-        .wrapper {
+                h1 {
+                    font-size: 3.5em;
+                }
 
-            h1 {
-                font-size: 42px;
-            }
-
-            h2 {
-                font-size: 22px;
-            }
-        }
-    }
-    
-    @include lg {
-        flex-direction: column;
-
-        .left-hero {
-            width: 100%;
-            height: 45%;
-        }
-
-        .right-hero {
-            width: 100%;
-            height: 55%;
-
-            img {
-                width: 70%;
-                right: 0;
-                // transform: translateX(50%);
-            }
-        }
-
-        .wrapper {
-            justify-content: flex-start;
-            margin-top: 150px;
-
-            h1 {
-                font-size: 50px;
-            }
-
-            h2 {
-                font-size: 30px;
-            }
-        }
-    }
-
-    @include md {
-        .right-hero {
-            img {
-                width: 55%;
-                right: 50%;
-                transform: translateX(50%);
-            }
-        }
-
-        .wrapper {
-            margin-top: 120px;
-
-            h1 {
-                font-size: 45px;
-            }
-
-            h2 {
-                font-size: 25px;
-            }
-        }
-    }
-
-    @include sm {
-        .right-hero {
-            img {
-                width: 85%;
-                right: 50%;
-                transform: translateX(60%);
-                z-index: 999;
-            }
-        }
-
-        .wrapper {
-            margin-top: 100px;
-
-            @media screen and (min-height: 896px) {
-                margin-top: 130px;
-            }
-
-            .heading {
-                margin-bottom: 10px;
-
+                h2 {
+                    font-size: 2em;
+                }
                 
             }
+        }
 
-            h1 {
-                font-size: 30px;
-            }
+        @include md {
+            .wrapper {
+                .heading {
+                    margin-bottom: 1em;
+                }
 
-            h2 {
-                font-size: 20px;
+                h1 {
+                    font-size: 5.5em;
+                }
+
+                h2 {
+                    font-size: 3.5em;
+                } 
             }
         }
-    }
+
+        @media (min-width: $screen-3-min) and (min-height: 572px) {
+            flex-direction: row;
+
+            .left-hero {
+                width: 50%;
+                height: 100%;
+            }
+
+            .right-hero {
+                width: 50%;
+                height: 100%;
+            }
+
+            .wrapper {
+                height: 100%;
+                margin-top: 10px;
+
+                .heading {
+                    margin-bottom: 1em;
+                }
+
+                h1 {
+                    font-size: 5em;
+                }
+
+                h2 {
+                    font-size: 3em;
+                }
+                
+            }
+        }
+
+        @media (orientation: landscape) and (max-width: 750px) and (min-height: 572px) {
+            .wrapper {
+                h1 {
+                    font-size: 4em;
+                }
+
+                h2 {
+                    font-size: 2em;
+                }
+                
+            }
+        }
+        @media (orientation: landscape) and (max-width: 850px) and (min-height: 572px) {
+            .wrapper {
+                h1 {
+                    font-size: 4.6em;
+                }
+
+                h2 {
+                    font-size: 2.6em;
+                }
+                
+            }
+        }
+
+        @include xl {
+            flex-direction:row;
+
+            .left-hero {
+                width: 100%;
+                height: 100%;
+            }
+
+            .right-hero {
+                width: 100%;
+                height: 100%;
+            }
+
+            .wrapper {
+                height: 100%;
+
+                .heading {
+                    margin-bottom: 2em;
+                }
+
+                h1 {
+                    font-size: 6.5em;
+                }
+
+                h2 {
+                    font-size: 3.5em;
+                }
+                
+            }
+        }
 }

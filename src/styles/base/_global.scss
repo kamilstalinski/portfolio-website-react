@@ -3,11 +3,17 @@
     margin: 0 auto;
     padding: 0 80px;
 
-    @include md {
-        padding: 0 60px;
-    }
-
-    @include sm {
+    @include ssm {
         padding: 0 20px;
     }
+
+    @include md {
+        padding: 0 30px;
+    }
+
+    @include xl{
+        padding: 0 60px;
+    }
 }
+
+

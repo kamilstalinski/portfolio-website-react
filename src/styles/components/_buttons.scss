@@ -1,5 +1,4 @@
 .main-btn {
-    font-family: NeueMetana-Regular;
     width: fit-content;
     padding: 20px 55px;
     background-color: #000;
@@ -17,13 +16,18 @@
         background-color: $additional-color;
     }
 
+    @include ssm {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    @include md {
+        padding: 10px 25px;
+        font-size: 2em;
+    }
+
+
     @include lg {
         padding: 15px 50px;
         font-size: 18px;
-    }
-
-    @include sm {
-        padding: 10px 25px;
-        font-size: 12px;
     }
 }

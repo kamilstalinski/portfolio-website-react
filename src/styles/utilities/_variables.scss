@@ -3,14 +3,10 @@ $secondary-color: #13BD19;
 $additional-color: #961CBD;
 $font-color: #ffffff;
 
-// Small tablets and large smartphones (landscape view)
-$screen-sm-min: 576px;
 
-// Small tablets (portrait view)
-$screen-md-min: 768px;
-
-// Tablets and small desktops
-$screen-lg-min: 992px;
-
-// Large tablets and desktops
-$screen-xl-min: 1200px;
+$screen-1-min: 320px;
+$screen-2-min: 481px;
+$screen-3-min: 641px;
+$screen-4-min: 961px;
+$screen-5-min: 1025px;
+$screen-6-min: 1281px;
