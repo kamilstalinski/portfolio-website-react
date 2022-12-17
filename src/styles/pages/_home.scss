@@ -35,7 +35,7 @@
                 }
 
                 @media (orientation: portrait) and (min-width: $screen-3-min){
-                    max-width: 130%;
+                    max-width: 150%;
                 }
                 @include lg {
                         right: 0;
@@ -179,12 +179,12 @@
             flex-direction: row;
 
             .left-hero {
-                width: 50%;
+                width: 55%;
                 height: 100%;
             }
 
             .right-hero {
-                width: 50%;
+                width: 45%;
                 height: 100%;
             }
 
@@ -204,6 +204,15 @@
                     font-size: 3em;
                 }
                 
+            }
+        }
+        @media (orientation: landscape) and (min-width: $screen-3-min) {
+            .left-hero {
+                width: 50%;
+            }
+
+            .right-hero {
+                width: 50%;
             }
         }
 

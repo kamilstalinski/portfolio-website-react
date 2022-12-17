@@ -18,7 +18,11 @@
         }
     }
 
-    @include lg {
-        bottom: -15%;
+    @media (orientation: landscape) and (min-width: $screen-3-min) {
+        bottom: 0;
     }
+
+    // @include lg {
+    //     bottom: -15%;
+    // }
 }
